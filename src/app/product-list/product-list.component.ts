@@ -4,10 +4,10 @@ import { IProduct } from './product';
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
-  styleUrls: ['./product-list.component.css']
+  styleUrls: ['./product-list.component.css'],
 })
 export class ProductListComponent implements OnInit {
-  pageTitle: string = "Product List";
+  pageTitle: string = 'Product List';
   imageWidth: number = 50;
   imageMargin: number = 2;
   showImage: boolean = false;
@@ -15,7 +15,7 @@ export class ProductListComponent implements OnInit {
   private _listFilter: string = '';
   get listFilter(): string {
     return this._listFilter;
-  };
+  }
   set listFilter(value: string) {
     this._listFilter = value;
     console.log('in setter', value);
@@ -59,5 +59,9 @@ export class ProductListComponent implements OnInit {
     return this.products.filter((product) =>
       product.productName.toLocaleLowerCase().includes(filterBy)
     );
+  }
+
+  onRatingClicked(message: string): void {
+    this.pageTitle = 'Product List: ' + message;
   }
 }
