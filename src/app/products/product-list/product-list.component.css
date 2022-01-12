@@ -1,3 +1,16 @@
 thead {
-    color: #337Ab7;
+  color: #337Ab7;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn-link {
+  margin-left: 5px;
+  text-decoration: none;
+}
+
+.btn-link:focus {
+  box-shadow: 0 0 0 1px lightblue;
 }
