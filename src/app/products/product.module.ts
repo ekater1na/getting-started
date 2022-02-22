@@ -1,6 +1,5 @@
 import {NgModule} from '@angular/core';
 import {ProductListComponent} from "./product-list/product-list.component";
-import {ConverToSpacesPipe} from "../shared/conver-to-spaces.pipe";
 import {ProductDetailComponent} from "./product-detail/product-detail.component";
 import {RouterModule} from "@angular/router";
 import {ProductDetailGuard} from "./product-detail.guard";
@@ -10,7 +9,6 @@ import {SharedModule} from "../shared/shared.module";
 @NgModule({
   declarations: [
     ProductListComponent,
-    ConverToSpacesPipe,
     ProductDetailComponent,
   ],
   imports: [
